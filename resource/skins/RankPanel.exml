@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RankPanelSkin" width="720" height="1280" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*" >
+	<w:Config id="160a035ebee" ></w:Config>
+	<e:Image x="0" y="0" source="bg_jpg"/>
+    <e:Scroller id="scroller" width="670" anchorOffsetX="0" anchorOffsetY="0" top="304" left="28" right="20" bottom="41">
+
+		<e:Skin>
+			<e:VScrollBar id="verticalScrollBar" width="8" minHeight="100%" height="100%" right="0">
+            <e:Skin>
+					<e:Image id="thumb" width="0" source="" />
+				</e:Skin>
+			</e:VScrollBar>
+		</e:Skin>
+			<e:List id="mylist" height="1079" y="-1.52"/>
+	</e:Scroller>
+	<e:Image id="backBtn" source="rankBack_png" left="30" top="57"/>
+	<e:Label text="排行榜" x="296" y="72" fontFamily="SimHei" bold="true" size="40"/>
+	<e:Group width="660" height="192" x="30" y="140" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Button id="localBtn" label="Button" anchorOffsetX="0" width="334" anchorOffsetY="0" height="74" skinName="tabBtnSkin" top="20" right="326" x="0" y="-74" scaleX="1" scaleY="1"/>
+		<e:Button id="nationBtn" label="Button" anchorOffsetX="0" width="334" anchorOffsetY="0" height="74" skinName="tabBtn2Skin" top="20" right="-4" x="334" y="-74" scaleX="1" scaleY="1"/>
+		<e:Rect width="659.86" height="70" x="0" y="96" anchorOffsetX="0" anchorOffsetY="0" fillColor="0xf6eded" strokeColor="0xf6eded"/>
+		<e:Label text="名称" x="204.09" y="115" size="24" textColor="0x737373" fontFamily="SimHei"/>
+		<e:Label text="得分" x="534.09" y="115" size="24" textColor="0x737373" fontFamily="SimHei"/>
+		<e:Label text="排名" x="35" y="115" size="24" textColor="0x737373" fontFamily="SimHei"/>
+	</e:Group>
+</e:Skin>

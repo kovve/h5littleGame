@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GameUI" width="720" height="1280" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+		<tween:TweenGroup id="slidIn2048">
+			<tween:TweenItem target="{titleLabel}">
+				<tween:Set>
+					<tween:props>
+						<e:Object x="{-200}" y="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="800" ease="sineInOut">
+					<tween:props>
+						<e:Object x="{20}" y="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Group width="100%" height="312.12" anchorOffsetY="0" anchorOffsetX="0" bottom="7" horizontalCenter="0">
+		<e:Image source="bottombg_png" width="100%" bottom="-8.879999999999995" horizontalCenter="1"/>
+	</e:Group>
+	
+	<e:Group id="data" locked="true"/>
+	<e:Group left="0" top="0" width="100%" height="100%">
+		<e:Group left="20" y="0" height="120" width="100%">
+			<e:Label id="titleLabel" text="2048" size="76" textColor="0x776e65" anchorOffsetX="0" verticalAlign="middle" textAlign="center" height="120" bold="true" cacheAsBitmap="true" italic="true" x="-200"/>
+			<e:Button id="infoBtn" label="说明" enabled="true" visible="true" anchorOffsetY="0" height="76" anchorOffsetX="0" width="133" top="27" horizontalCenter="-45.5">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="rectBtn0_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Group height="70%" anchorOffsetX="0" width="125" scaleX="1" scaleY="1" top="23" horizontalCenter="244.5">
+				<e:Rect left="0" right="2" top="0" bottom="0" ellipseWidth="50" ellipseHeight="50" anchorOffsetX="0" width="182" height="128" fillColor="0xe8200d"/>
+				<e:Label text="BEST" top="0" bottom="42" verticalAlign="middle" textAlign="center" left="16" right="6" size="25" textColor="0xEEE4DA" anchorOffsetX="0"/>
+				<e:Label top="42" bottom="10" verticalAlign="middle" textAlign="center" left="16" right="6" size="28" textColor="0xFFFFFF" text="{data.bestScore}" bold="true" anchorOffsetX="0" anchorOffsetY="0"/>
+				<e:layout>
+				<e:BasicLayout/>
+				</e:layout>
+			</e:Group>
+			<e:Group height="70%" anchorOffsetX="0" width="125" scaleX="1" scaleY="1" top="23" horizontalCenter="100.5">
+				<e:Rect left="0" right="-1" top="0" bottom="0" ellipseWidth="50" ellipseHeight="50" anchorOffsetX="0" width="198" height="128" fillColor="0xe8200d"/>
+				<e:Label text="SCORE" top="-1" bottom="42" verticalAlign="middle" textAlign="center" left="16" right="7" size="25" textColor="0xeee4da" anchorOffsetX="0" rotation="359.08"/>
+				<e:Label top="42" bottom="0" verticalAlign="middle" textAlign="center" left="16" right="7" size="28" textColor="0xffffff" bold="true" text="{data.curScore}" anchorOffsetX="-3.03"/>
+				<e:layout>
+				<e:BasicLayout/>
+				</e:layout>
+			</e:Group>
+			<e:layout>
+				<e:BasicLayout/>
+			</e:layout>
+		</e:Group>
+		<e:Group width="100%" height="120" x="22" y="118" scaleX="1" scaleY="1">
+			<e:layout>
+				<e:BasicLayout/>
+			</e:layout>
+			<e:Button id="newGame" label="重新开始" enabled="true" visible="true" top="6" horizontalCenter="-6">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="rectBtn4_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="rewadBtn" label="奖励" enabled="true" visible="true" top="6" horizontalCenter="209">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="rectBtn1_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+			<e:Button id="rankBtn" label="排行榜" enabled="true" visible="true" top="6" horizontalCenter="-221">
+				<e:skinName>
+				<e:Skin states="up,down,disabled">
+					<e:Image width="100%" height="100%" source="rectBtn2_png"/>
+					<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+				</e:skinName>
+			</e:Button>
+		</e:Group>
+		<e:Group id="gamePanel" width="600" height="600" x="232" y="120">
+
+			<e:Group id="gameOver" width="280" height="160" horizontalCenter="0" verticalCenter="0">
+				<e:Rect fillColor="0xe0e0e0" fillAlpha="0.7" enabled="true" ellipseWidth="32" ellipseHeight="32" left="0" top="0" right="0" bottom="0"/>
+				<e:Label text="Game Over !" anchorOffsetX="0" anchorOffsetY="0" height="60" left="0" textAlign="center" verticalAlign="middle" bold="true" italic="true" size="35" textColor="0xff3600" width="100%" top="0"/>
+				<e:Label anchorOffsetX="0" anchorOffsetY="0" height="50" left="0" right="0" top="60" size="28" text="{data.curScore}" textAlign="center" bold="true" verticalAlign="middle" textColor="0x727272"/>
+				<e:Label id="newGameInGameOver" anchorOffsetX="0" anchorOffsetY="0" left="0" right="0" size="28" text="New Game" textAlign="center" bold="true" verticalAlign="middle" bottom="0" textColor="0x288cff" height="50"/>
+				<e:layout>
+					<e:BasicLayout/>
+				</e:layout>
+			</e:Group>
+		
+			<e:layout>
+				<e:BasicLayout/>
+			</e:layout>
+		</e:Group>
+		<e:layout>
+			<e:VerticalLayout horizontalAlign="center" gap="0"/>
+		</e:layout>
+	</e:Group>
+</e:Skin>
+

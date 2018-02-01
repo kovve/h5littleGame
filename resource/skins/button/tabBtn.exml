@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="tabBtnSkin" states="up,down" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" height.up="74">
+	<e:Image source="unselect_png" includeIn="down" x="0" y="0" locked="true"/>
+	<e:Image source="select_png" includeIn="up" x="-5" y="0" visible="true"/>
+	<e:Label text="本地排名" includeIn="down" x="108" y="24" anchorOffsetX="0" width="133.33" textColor="0xffd2d2"/>
+	<e:Image width="42" height="42" x="56" y="16" anchorOffsetX="0" anchorOffsetY="0" source="local_2_png" includeIn="down"/>
+	<e:Image width="42" height="42" x="56" y="16" anchorOffsetX="0" anchorOffsetY="0" includeIn="up" source="localRank_png"/>
+	<e:Label text="本地排名" x="108" y="24" anchorOffsetX="0" width="176" fontFamily="SimHei" includeIn="up" textColor="0x333333"/>
+	
+</e:Skin>
